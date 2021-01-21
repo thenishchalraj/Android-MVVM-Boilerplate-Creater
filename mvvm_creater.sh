@@ -1,24 +1,57 @@
 #!/bin/bash
 # Created by thenishchalraj
 
-if [ -z "$1" ]
+#########################################################
+# HELP							#
+#########################################################
+help(){
+	echo "Usage options:"
+	echo
+	echo "-h			shows help options"
+	echo "argument1		directory path where files should be created,"
+	echo "argument2		base application name,"
+	echo "argument3		package name"
+	echo
+	echo
+	echo "Usage example:"
+	echo "./mvvm_creater.sh -h"
+	echo "---> displays this usage"
+	echo
+	echo "./mvvm_creater.sh ~/test ToDo com.example.todoapp"
+	echo "---> create the files for package 'com.example.todoapp' i.e <argument3> with base application name 'ToDo' i.e. <argument2> in directory '~/test' i.e. <argument1>"
+}
+
+#########################################################
+# OPTIONS CONDITIONS					#
+#########################################################
+if [[ "$1" == "-h" ]]
 	then
-		echo "Missing directory path!\nFiles can't be created!\nEXITING..."
+		help
+		exit 0
+fi
+
+if [[ -z "$1" ]]
+	then
+		printf "Missing directory path!\nFiles can't be created!\nEXITING..."
 		exit 1
 fi
 
-if [ -z "$2" ]
+if [[ -z "$2" ]]
 	then
 		printf "Missing base application name!\nRun again with name like:\nWeather,\nToDo,\nGrocery\nEXITING..."
 		exit 1
 fi
 
-if [ -z "$3" ]
+if [[ -z "$3" ]]
 	then
 		printf "Missing package name!\nRun again!\nEXITING..."
 
 fi
 
+
+#########################################################
+# FILES CREATION					#
+#########################################################
 echo "Creating MVVM Files in" $1
 
 cd $1
@@ -51,6 +84,7 @@ class $2Application: DaggerApplication() {
 }
 EOF
 
+
 mkdir ui
 cd ui/
 mkdir base
@@ -61,6 +95,7 @@ mkdir viewmodel
 cd -
 cd -
 
+echo
 echo "----------DONE!----------"
 
 printf "\nAdd depedencies for the following in your build.gradle(app) :\n1. Retrofit2\n2. Lifecycle\n3. Dagger2"

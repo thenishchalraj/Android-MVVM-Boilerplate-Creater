@@ -14,3 +14,5 @@
 ### References
 * [Bash Cheatsheet](https://devhints.io/bash)
 * [Shell Scripting](https://tecadmin.net/tutorial/bash-scripting/)
+* [Functions in Bash](https://linuxize.com/post/bash-functions/)
+* [Exit in Bash](https://askubuntu.com/questions/892604/what-is-the-meaning-of-exit-0-exit-1-and-exit-2-in-a-bash-script)
