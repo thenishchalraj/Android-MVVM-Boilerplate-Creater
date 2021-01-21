@@ -1,5 +1,5 @@
 #### Hey there!
-# MVVM Boilerplate Creater
+# Android MVVM Boilerplate Creater
 
 ### Features
 
