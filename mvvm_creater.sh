@@ -52,24 +52,58 @@ fi
 #########################################################
 # FILES CREATION					#
 #########################################################
-echo "Creating MVVM Files in" $1
+echo "Creating MVVM Files in " $1
 
 cd $1
 
 mkdir data
 cd data/
 mkdir api
+cd api/
+cat << EOF >> MainApi.kt
+package $3.data.api
+
+import $3.utils.Endpoints
+import com.google.gson.JsonObject
+import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Path
+
+interface MainApi {}
+EOF
+cat << EOF >> MainDataSource.kt
+package $3.data.api
+
+import android.app.Application
+import androidx.lifecycle.MediatorLiveData
+import $3.R
+import $3.data.model.WeatherModel
+import $3.utils.ISTDateDeserializer
+import $3.utils.Resource
+import com.google.gson.GsonBuilder
+import com.google.gson.JsonObject
+import com.google.gson.reflect.TypeToken
+import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.util.*
+import kotlin.collections.ArrayList
+
+class MainDataSource(
+    private val mainApi: MainApi,
+    private val application: Application
+) {}
+EOF
+cd -
 mkdir model
 mkdir repository
-cd -
-
+cd ../
 mkdir di
 cd di/
 mkdir base
 cd -
-
 mkdir utils
-
 cat << EOF >> $2Application.kt
 package $3
 
@@ -83,8 +117,6 @@ class $2Application: DaggerApplication() {
     }
 }
 EOF
-
-
 mkdir ui
 cd ui/
 mkdir base
