@@ -81,7 +81,7 @@ fi
 if [[ -z "$3" ]]
 	then
 		printf "Missing package name!\nRun again!\nEXITING..."
-
+		exit 1
 fi
 
 
