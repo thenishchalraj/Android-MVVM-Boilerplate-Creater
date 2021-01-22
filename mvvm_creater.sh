@@ -27,7 +27,7 @@ help(){
 # SUGGESTIONS						#
 #########################################################
 suggestions(){
-	echo	
+	echo
 	echo "Suggestions:"
 	echo "1. May use Volley instead of Retrofit."
 	echo "2. Create different packages for different features in the main package. (recommended)"
@@ -38,14 +38,12 @@ suggestions(){
 # DEPENDENCIES						#
 #########################################################
 dependencies(){
-	echo	
+	echo
 	echo "Dependencies:"
 	echo "1. Retrofit2"
 	echo "2. Lifecycle"
 	echo "3. Dagger2"
 }
-
-printf "\nAdd depedencies for the following in your build.gradle(app) :\n1. Retrofit2\n2. Lifecycle\n3. Dagger2\n"
 
 #########################################################
 # OPTIONS CONDITIONS					#
