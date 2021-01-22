@@ -14,6 +14,15 @@ A script that creates the files and codes in them for android MVVM architecture 
 
 ### Steps to run
 (tested on linux)
+METHOD 1:
+* Go to the release space [here](https://github.com/thenishchalraj/Android-MVVM-Boilerplate-Creater/releases)
+* Download suitable Asset
+* Extract it
+* Move into the directory
+* Modify the file permission (if applicable)
+* Run according to the usage
+
+METHOD 2:
 * `git clone https://github.com/thenishchalraj/Android-MVVM-Boilerplate-Creater.git`
 * `cd Android-MVVM-Boilerplate-Creater`
 * `chmod +x ./mvvm_creater.sh`
@@ -22,7 +31,38 @@ A script that creates the files and codes in them for android MVVM architecture 
 Boom! you're done.
 
 #### Packages and files that are created
-![Android MVVM Packages and files](https://github.com/thenishchalraj/Android-MVVM-Boilerplate-Creater/blob/main/assets/boilerplate_thumb.png)
+```
+.
+└───├── data/
+    │   ├── api/
+    │   │   ├── MainApi.kt
+    │   │   └── MainDataSource.kt
+    │   ├── model/
+    │   │   └── SomeModel.kt
+    │   └── repository/
+    │       └── MainRepository.kt
+    ├── di/
+    │   ├── base/
+    │   │   ├── AppComponent.kt
+    │   │   ├── AppModule.kt
+    │   │   ├── ViewModelFactoryModule.kt
+    │   │   ├── ViewModelKey.kt
+    │   │   └── ViewModelModule.kt
+    │   ├── ActivityBuildersModule.kt
+    │   └── MainModule.kt
+    ├── ui/
+    │   ├── base/
+    │   │   └── ViewModelFactory.kt
+    │   └── main/
+    │       ├── view
+    │       └── viewmodel
+    ├── utils/
+    │   ├── Endpoints.kt
+    │   ├── ISTDateDeserializer.kt
+    │   ├── Resource.kt
+    │   └── Status.kt
+    └── WeatherApplication.kt
+```
 
 ### Usage
 * -h (shows help)
