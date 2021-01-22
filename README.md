@@ -4,12 +4,11 @@
 ### Features
 
 ### ToDos
-- [ ] Create files inside the directories
-- [ ] Write basic code into the files
-- [ ] Include package name and imports of respective files into all files created
-- [ ] Respond with the dependencies that needed to be pasted in build.gradle (app)
-- [ ] Make the script more compact/optimized
-
+- [x] Create files inside the directories
+- [x] Write basic code into the files
+- [x] Include package name and imports of respective files into all files created
+- [x] Respond with the dependencies that needed to be added in build.gradle (app)
+- [ ] Make the script compact/optimized
 
 ### References
 * [Bash Cheatsheet](https://devhints.io/bash)
