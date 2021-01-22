@@ -33,8 +33,7 @@ Boom! you're done.
 #### Packages and files that are created
 ```
 .
-└── ./
-    ├── data/
+└───├── data/
     │   ├── api/
     │   │   ├── MainApi.kt
     │   │   └── MainDataSource.kt
