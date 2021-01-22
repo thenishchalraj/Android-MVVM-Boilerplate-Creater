@@ -7,7 +7,7 @@ A script that creates the files and codes in them for android MVVM architecture 
 ### Features
 - [x] Each layer in different package
 - [x] Generates basic utility package
-- [x] Packages with all the basic codes
+- [x] Packages with all the basic codes in Kotlin
 - [x] Contains imports for all the files created
 - [x] Uses Retrofit2 and Dagger2
 - [x] Dependencies and suggestions after boilerplate created
