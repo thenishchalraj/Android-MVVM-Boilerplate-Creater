@@ -31,7 +31,39 @@ METHOD 2:
 Boom! you're done.
 
 #### Packages and files that are created
-![Android MVVM Packages and files](https://github.com/thenishchalraj/Android-MVVM-Boilerplate-Creater/blob/main/assets/boilerplate_thumb.png)
+```
+.
+└── ./
+    ├── data/
+    │   ├── api/
+    │   │   ├── MainApi.kt
+    │   │   └── MainDataSource.kt
+    │   ├── model/
+    │   │   └── SomeModel.kt
+    │   └── repository/
+    │       └── MainRepository.kt
+    ├── di/
+    │   ├── base/
+    │   │   ├── AppComponent.kt
+    │   │   ├── AppModule.kt
+    │   │   ├── ViewModelFactoryModule.kt
+    │   │   ├── ViewModelKey.kt
+    │   │   └── ViewModelModule.kt
+    │   ├── ActivityBuildersModule.kt
+    │   └── MainModule.kt
+    ├── ui/
+    │   ├── base/
+    │   │   └── ViewModelFactory.kt
+    │   └── main/
+    │       ├── view
+    │       └── viewmodel
+    ├── utils/
+    │   ├── Endpoints.kt
+    │   ├── ISTDateDeserializer.kt
+    │   ├── Resource.kt
+    │   └── Status.kt
+    └── WeatherApplication.kt
+```
 
 ### Usage
 * -h (shows help)
