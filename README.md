@@ -4,16 +4,20 @@
 # Android MVVM Boilerplate Creater
 A script that creates the files and codes in them for android MVVM architecture in kotlin.
 
+<img src="https://img.shields.io/badge/Version-v1.0.1-green" /> <img src="https://img.shields.io/badge/License-MIT-blue" />
+
 ### Features
-- [x] Each layer in different package
-- [x] Generates basic utility package
-- [x] Packages with all the basic codes in Kotlin
-- [x] Contains imports for all the files created
-- [x] Uses Retrofit2 and Dagger2
-- [x] Dependencies and suggestions after boilerplate created
+- [x] Type command > Enter > Done. (it's that fast)
+- [x] Each layer in different package.
+- [x] Generates basic utility package too.
+- [x] Packages with all the basic codes in Kotlin.
+- [x] Contains imports for all the files created.
+- [x] Uses Retrofit2 and Dagger2.
+- [x] Dependencies and suggestions after boilerplate created.
 
 ### Steps to run
 (tested on linux)
+
 METHOD 1:
 * Go to the release space [here](https://github.com/thenishchalraj/Android-MVVM-Boilerplate-Creater/releases)
 * Download suitable Asset
@@ -27,7 +31,7 @@ METHOD 2:
 * `cd Android-MVVM-Boilerplate-Creater`
 * `chmod +x ./mvvm_creater.sh`
 * (for demo) `./mvvm_creater.sh ~/testing_dir Weather com.example.weatherapp`
-</br>
+
 Boom! you're done.
 
 #### Packages and files that are created

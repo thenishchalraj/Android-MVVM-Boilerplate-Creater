@@ -5,7 +5,9 @@
 # HELP							#
 #########################################################
 help(){
-	echo "Usage options:"
+	echo "_________________________________________________________________________"
+	echo "| USAGE OPTIONS                                                         |"
+	echo "|_______________________________________________________________________|"
 	echo
 	echo "-h			show help options"
 	echo "-s			show suggestions"
@@ -27,22 +29,45 @@ help(){
 # SUGGESTIONS						#
 #########################################################
 suggestions(){
+	echo "_________________________________________________________________________"
+	echo "| SUGGESTIONS                                                           |"
+	echo "|_______________________________________________________________________|"
 	echo
-	echo "Suggestions:"
 	echo "1. May use Volley instead of Retrofit."
+	echo
 	echo "2. Create different packages for different features in the main package. (recommended)"
 	echo "OR, Create a package as feature in ui, and then different features in it."
+	echo
+	echo "3. Keep the version number of the dependencies in a variable and use that variable."
+	echo "	example:"
+	echo "		def some_version = '1.1.1'"
+	echo "		implementation \"com.some.dependencies:depend:\$some_version\""
+	echo
+	echo "4. Look for the dependencies from here: https://developer.android.com/jetpack/androidx/explorer"
 }
 
 #########################################################
 # DEPENDENCIES						#
 #########################################################
 dependencies(){
+	echo "_________________________________________________________________________"
+	echo "| DEPENDENCIES                                                          |"
+	echo "|_______________________________________________________________________|"
 	echo
-	echo "Dependencies:"
 	echo "1. Retrofit2"
+	echo "	implementation 'com.squareup.retrofit2:retrofit:2.9.0'"
+	echo "	implementation 'com.squareup.retrofit2:converter-gson:2.9.0'"
+	echo "	implementation 'com.squareup.retrofit2:converter-scalars:2.9.0"
+	echo
 	echo "2. Lifecycle"
+	echo "	implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'"
+	echo
 	echo "3. Dagger2"
+	echo "	implementation 'com.google.dagger:dagger:2.28.3'"
+	echo "	kapt 'com.google.dagger:dagger-compiler:2.28.3'"
+	echo "	implementation 'com.google.dagger:dagger-android:2.28.3'"
+    	echo "	implementation 'com.google.dagger:dagger-android-support:2.28.3'"
+    	echo "	kapt 'com.google.dagger:dagger-android-processor:2.28.3'"
 }
 
 #########################################################
@@ -181,7 +206,7 @@ data class SomeModel(
 	val mKey2: Int,
 
 	*/
-    
+
 ) {}
 EOF
 cd ../
