@@ -54,20 +54,24 @@ dependencies(){
 	echo "| DEPENDENCIES                                                          |"
 	echo "|_______________________________________________________________________|"
 	echo
+	echo "put -> id 'kotlin-kapt' in the plugins {...} of app's build.gradle"
+	echo "then the following dependencies into dependencies {...}"
+	echo
 	echo "1. Retrofit2"
-	echo "	implementation 'com.squareup.retrofit2:retrofit:2.9.0'"
-	echo "	implementation 'com.squareup.retrofit2:converter-gson:2.9.0'"
-	echo "	implementation 'com.squareup.retrofit2:converter-scalars:2.9.0"
+	echo "	implementation \"com.squareup.retrofit2:retrofit:2.9.0\""
+	echo "	implementation \"com.squareup.retrofit2:converter-gson:2.9.0\""
+	echo "	implementation \"com.squareup.retrofit2:converter-scalars:2.9.0\""
 	echo
 	echo "2. Lifecycle"
-	echo "	implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'"
+	echo "	implementation \"androidx.lifecycle:lifecycle-extensions:2.2.0\""
+	echo "	implementation \"androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0\""
 	echo
 	echo "3. Dagger2"
-	echo "	implementation 'com.google.dagger:dagger:2.28.3'"
-	echo "	kapt 'com.google.dagger:dagger-compiler:2.28.3'"
-	echo "	implementation 'com.google.dagger:dagger-android:2.28.3'"
-    	echo "	implementation 'com.google.dagger:dagger-android-support:2.28.3'"
-    	echo "	kapt 'com.google.dagger:dagger-android-processor:2.28.3'"
+	echo "	implementation \"com.google.dagger:dagger:2.28.3\""
+	echo "	kapt \"com.google.dagger:dagger-compiler:2.28.3\""
+	echo "	implementation \"com.google.dagger:dagger-android:2.28.3\""
+    	echo "	implementation \"com.google.dagger:dagger-android-support:2.28.3\""
+    	echo "	kapt \"com.google.dagger:dagger-android-processor:2.28.3\""
 }
 
 #########################################################
@@ -237,7 +241,6 @@ cat << EOF >> ActivityBuildersModule.kt
 package $3.di
 
 import $3.di.base.ViewModelModule
-import $3.ui.main.view.WeatherActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -531,6 +534,21 @@ mkdir main
 cd main/
 mkdir view
 mkdir viewmodel
+cd viewmodel/
+cat << EOF >> MainViewModel.kt
+package $3.ui.main.viewmodel
+
+import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.ViewModel
+import $3.data.repository.MainRepository
+import $3.utils.Resource
+import javax.inject.Inject
+
+class MainViewModel @Inject constructor(
+    private val repository: MainRepository
+) : ViewModel() {}
+EOF
+cd ../
 cd -
 cd -
 
