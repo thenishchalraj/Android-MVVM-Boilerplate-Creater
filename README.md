@@ -37,14 +37,14 @@ Boom! you're done.
 #### Packages and files that are created
 ```
 .
-└───├── data/
-    │   ├── api/
-    │   │   ├── MainApi.kt
-    │   │   └── MainDataSource.kt
-    │   ├── model/
-    │   │   └── SomeModel.kt
-    │   └── repository/
-    │       └── MainRepository.kt
+└── data/
+    ├── api/
+    │   ├── MainApi.kt
+    │   └── MainDataSource.kt
+    ├── model/
+    │   └── SomeModel.kt
+    ├── repository/
+    │   └── MainRepository.kt
     ├── di/
     │   ├── base/
     │   │   ├── AppComponent.kt
@@ -59,7 +59,8 @@ Boom! you're done.
     │   │   └── ViewModelFactory.kt
     │   └── main/
     │       ├── view
-    │       └── viewmodel
+    │       └── viewmodel/
+    │           └── MainViewModel.kt
     ├── utils/
     │   ├── Endpoints.kt
     │   ├── ISTDateDeserializer.kt
