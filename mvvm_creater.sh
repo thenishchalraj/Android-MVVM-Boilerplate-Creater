@@ -165,7 +165,7 @@ class MainDataSource(
 ) {
 	/**
 		private var mSomeData: MediatorLiveData<Resource<ArrayList<SomeModel>>>? = null
-	    	fun getWeather(): MediatorLiveData<Resource<ArrayList<SomeModel>>> {
+	    	fun someTest(): MediatorLiveData<Resource<ArrayList<SomeModel>>> {
 		mSomeData = MediatorLiveData()
 		mSomeData?.value = Resource.loading(null)
 
