@@ -133,11 +133,12 @@ import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface MainApi {
 	/**
 		@GET(Endpoints.SOME_ENDPOINT)
-		fun someTest(@Path("someQuery") mSomeQuery: String): Call<JsonObject>
+		fun someTest(@Path("pathKey") mPathKey: String, @Query("someQuery") mSomeQuery: String): Call<JsonObject>
 	*/
 }
 EOF
@@ -436,7 +437,7 @@ package $3.utils
 object Endpoints {
     const val BASE_URL = "https://www.somesample.url/"
 
-    const val SOME_ENDPOINT = "someendpoint/{someQuery}"
+    const val SOME_ENDPOINT = "someendpoint/{pathKey}" // ?someQuery=someValue
 
 }
 EOF
