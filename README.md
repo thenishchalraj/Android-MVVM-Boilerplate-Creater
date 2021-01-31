@@ -77,6 +77,8 @@ Boom! you're done.
 
 ### ToDos
 - [ ] Make the script compact/optimized
+- [ ] Different scripts for different architecture (MVP, MVC, Full-Modular or some best techniques)
+- [ ] Make and test its working on windows & mac
 
 ### References
 * [Bash Cheatsheet](https://devhints.io/bash)
