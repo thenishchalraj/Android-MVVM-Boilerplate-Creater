@@ -6,6 +6,8 @@ A script that creates the files and codes in them for android MVVM architecture 
 
 <img src="https://img.shields.io/badge/Version-v1.3.1-green" /> <img src="https://img.shields.io/badge/License-MIT-blue" />
 
+[Android-MVVM-Boilerplate-Creater - behind the scenes](https://proandroiddev.com/android-mvvm-boilerplate-creater-behind-the-scenes-1184e6d26fd3)
+
 ### Features
 - [x] Type command > Enter > Done. (it's that fast)
 - [x] Each layer in different package.
